@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box
+  }
+ 
+  /* The Universal Selector */
+  *, /* All elements*/
+  *::before, /* All ::before pseudo-elements */
+  *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: grid;
+    height: 100vh;
+    max-width: 960px;
+    margin: auto;
+    font-family: Helvetica;
+    background-color: bisque;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 5px;
+    grid-template-areas: 
+      "nav nav nav"
+      "aside main main"
+      "footer footer footer";
+
+  }
+  nav {
+    display: flex;
+    height: 60px;
+    background-color: #845EC2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: nav;
+  }
+
+  nav > div {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: #4FFBDF;
+  }
+
+  nav > div:last-of-type {
+    margin-left: auto;
+  }
+
+  nav > img {
+    border-radius: 7px;
+    margin: 0 10px;
+    grid-area: nav;
+  }
+
+  aside {
+    background-color: #38b18a;
+    grid-area: aside;
+  }
+  
+  main {
+    background-color: #92d97c;
+    grid-area: main;
+  }
+  
+  footer {
+    background-color: #f9f871;
+    height: 40px;
+    grid-area: footer;
+  }
+
+  .grid-cntr {
+    display: grid;
+    place-items: center;
+  }
