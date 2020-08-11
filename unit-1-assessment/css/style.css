@@ -1,0 +1,30 @@
+body {
+    display: flex;  /* defaults to row layout */
+    justify-content: center;  /* centers items horizontally in row layout */
+    align-items: center;  /* centers vertically in row layout */
+    flex-direction: column; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    flex-direction: row;
+}
+
+input {
+    height: 36px;
+}
+
+button {
+    height: 36px;
+    width: 36px;
+}
+
+#reset {
+    margin-top: 5px;
+    width: auto;
+}
